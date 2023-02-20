@@ -27,26 +27,6 @@
             padding-top: 25px;
         }
         
-        .navbar{
-            display: flex;
-            justify-content: start;
-            font-size: x-large;
-            width: 20%;
-            text-align: center;
-            padding-bottom: 100px;
-        
-        }
-        
-        .navinfo{
-            text-decoration: none;
-            list-style: none;
-            text-transform: capitalize;
-            display: flex;
-            background-color: red;
-            padding-left: 25px;
-            text-align: center;
-        }
-        
         
         img{
             width: 100%;
@@ -101,14 +81,12 @@
 </head>
 
 <body>
+   
+    
     <div class="main">
+        {% include 'nav.html'%}
         <div class="container">
             <h1>{{company_name}} Careers</h1>
-            <!-- <ul class="navbar">
-                    <li class="navinfo">Home</li>
-                    <li class="navinfo2">Contact Us </li>         
-                </ul> -->
-
         </div>
         <img src="static/banner.jpg" alt="">
 
@@ -142,7 +120,8 @@
         <button > Contact Us </button>
         
     </div>
-    <h4 style="display: flex;justify-content: center;padding-top: 20px; padding-bottom: 20px;">Copyright 2023 , Workify</h4>
+   
+    {% include 'footer.html' %}
 </body>
 
 </html>
