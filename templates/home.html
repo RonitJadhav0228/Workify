@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workify</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  </head>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+        
+        
+        .container{
+            width: 100%;
+            height: 100px;
+        }
+        
+        .container h1{
+            display: flex;
+            justify-content: center;
+            padding-top: 25px;
+        }
+        
+        .navbar{
+            display: flex;
+            justify-content: start;
+            font-size: x-large;
+            width: 20%;
+            text-align: center;
+            padding-bottom: 100px;
+        
+        }
+        
+        .navinfo{
+            text-decoration: none;
+            list-style: none;
+            text-transform: capitalize;
+            display: flex;
+            background-color: red;
+            padding-left: 25px;
+            text-align: center;
+        }
+        
+        
+        img{
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+        }
+        
+        .info h1{
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+        }
+        
+        .info h3{
+            padding: 20px;
+            font-weight: normal;
+        }
+        
+        .job-info h1{
+            display: flex;
+            justify-content: center;
+            padding-top: 10px;
+        }
+        
+        .main{
+            max-width: 1000px;
+            margin: auto;
+        }
+        
+        .btn-cu{
+            display: flex;
+            justify-content: center;
+        }
+        
+        .btn-cu button{
+            width: 20%;
+            height: 40px;
+          padding: 10px 20px;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          background: #383838;
+          color: #ffff;
+          text-transform: capitalize;
+          font-size: 15px;
+          /* border-bottom-left-radius: 10;
+          border-top-right-radius: 10px;
+          border-bottom-right-radius: 10px; */
+          
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <h1>{{company_name}} Careers</h1>
+            <!-- <ul class="navbar">
+                    <li class="navinfo">Home</li>
+                    <li class="navinfo2">Contact Us </li>         
+                </ul> -->
+
+        </div>
+        <img src="static/banner.jpg" alt="">
+
+        <div class="info">
+            <h1> About us </h1>
+            <h2 class="fs-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, non optio. Aut a dolorem nisi vel
+                eos
+                magni assumenda quisquam laboriosam ut quas quibusdam sequi debitis optio quidem beatae incidunt, quis
+                ab,
+                possimus ex? Dolore, at, quia corporis, sed mollitia cumque laboriosam alias nesciunt deleniti maiores
+                animi
+                numquam omnis iure ipsam culpa perferendis magnam. Aliquam at voluptatum obcaecati numquam quis quidem
+                est
+                ullam officiis reprehenderit. Illum fugit consequuntur, corporis autem voluptas ipsum quis recusandae,
+                culpa
+                sed excepturi fuga minima error soluta quaerat, perspiciatis numquam facilis.
+                Impedit mollitia porro laudantium cum a. Iste minima, minus velit tempore doloremque dicta sit ad?</h2>
+        </div>
+
+         <div>
+            <h2 style="display:flex;justify-content:center">Open Positions </h2>
+            <div >
+                {%for job in jobs %}
+                        {% include  'jobdetails.html'%}
+                {% endfor%}
+            </div>
+
+         </div>
+    </div>
+    <div class="btn-cu">
+        <button > Contact Us </button>
+        
+    </div>
+    <h4 style="display: flex;justify-content: center;padding-top: 20px; padding-bottom: 20px;">Copyright 2023 , Workify</h4>
+</body>
+
+</html>
