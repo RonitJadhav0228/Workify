@@ -28,19 +28,13 @@
         }
         
         
-        img{
-            width: 100%;
-            height: 360px;
-            object-fit: cover;
-        }
-        
         .info h1{
             display: flex;
             justify-content: center;
             padding-top: 20px;
         }
         
-        .info h3{
+        .info h2{
             padding: 20px;
             font-weight: normal;
         }
@@ -51,14 +45,10 @@
             padding-top: 10px;
         }
         
-        .main{
-            max-width: 1000px;
-            margin: auto;
-        }
-        
         .btn-cu{
             display: flex;
             justify-content: center;
+            margin-bottom:25px;
         }
         
         .btn-cu button{
@@ -71,12 +61,26 @@
           background: #383838;
           color: #ffff;
           text-transform: capitalize;
-          font-size: 15px;
+          font-size: 20px;
+          
           /* border-bottom-left-radius: 10;
           border-top-right-radius: 10px;
           border-bottom-right-radius: 10px; */
           
         }
+
+    .img-fluid{
+        width:100%;
+        height:350px;
+        object-fit : cover
+    }
+
+    .col-6 button{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background:#f6f6f6;
+    }
     </style>
 </head>
 
@@ -88,26 +92,38 @@
         <div class="container">
             <h1>{{company_name}} Careers</h1>
         </div>
-        <img src="static/banner.jpg" alt="">
+        <img src="static/banner.jpg" class="img-fluid" alt="...">
+        
 
         <div class="info">
-            <h1> About us </h1>
-            <h2 class="fs-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, non optio. Aut a dolorem nisi vel
-                eos
-                magni assumenda quisquam laboriosam ut quas quibusdam sequi debitis optio quidem beatae incidunt, quis
-                ab,
-                possimus ex? Dolore, at, quia corporis, sed mollitia cumque laboriosam alias nesciunt deleniti maiores
-                animi
-                numquam omnis iure ipsam culpa perferendis magnam. Aliquam at voluptatum obcaecati numquam quis quidem
-                est
-                ullam officiis reprehenderit. Illum fugit consequuntur, corporis autem voluptas ipsum quis recusandae,
-                culpa
-                sed excepturi fuga minima error soluta quaerat, perspiciatis numquam facilis.
-                Impedit mollitia porro laudantium cum a. Iste minima, minus velit tempore doloremque dicta sit ad?</h2>
+            <h1>About us<h1>
+        </div>
+        <div class="container" style="height:30%">
+            <div class="row">
+              <div class="col-6">
+                <p class="fs-5" style="padding-left:10px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, non optio. Aut a dolorem nisi vel
+                    eos
+                    magni assumenda quisquam laboriosam ut quas quibusdam sequi debitis optio quidem beatae incidunt, quis
+                    ab,
+                    possimus ex? Dolore, at, quia corporis, sed mollitia cumque laboriosam alias nesciunt deleniti maiores
+                    animi
+                    numquam omnis iure ipsam culpa perferendis magnam. Aliquam at voluptatum obcaecati numquam quis quidem
+                    est
+                    ullam officiis reprehenderit. Illum fugit consequuntur, corporis autem voluptas ipsum quis recusandae,
+                    culpa
+                    sed excepturi fuga minima error soluta quaerat, perspiciatis numquam facilis.
+                    Impedit mollitia porro laudantium cum a. Iste minima, minus velit tempore doloremque dicta sit ad?
+                    </p>
+              </div>
+              <div class="col-6">
+                <img src="static/peoples_working.jpg" alt="" style= "height:360px">
+              </div>
+            </div>
         </div>
 
-         <div>
-            <h2 style="display:flex;justify-content:center">Open Positions </h2>
+
+        <div>
+            <h2 style="display:flex;justify-content:center;padding-top:20px">Open Positions </h2>
             <div >
                 {%for job in jobs %}
                         {% include  'jobdetails.html'%}
@@ -115,13 +131,12 @@
             </div>
 
          </div>
+
+         <div class="btn-cu">
+               <button type="button">Contact Us</button>
+         </div>
+
     </div>
-    <div class="btn-cu">
-        <button > Contact Us </button>
-        
-    </div>
-   
-    {% include 'footer.html' %}
 </body>
 
 </html>
