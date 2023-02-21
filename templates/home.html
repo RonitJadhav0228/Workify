@@ -89,18 +89,15 @@
     
     <div class="main">
         {% include 'nav.html'%}
-        <div class="container">
-            <h1>{{company_name}} Careers</h1>
-        </div>
         <img src="static/banner.jpg" class="img-fluid" alt="...">
         
 
         <div class="info">
-            <h1>About us<h1>
+            <h1>{{company_name}} Careers<h1>
         </div>
         <div class="container" style="height:30%">
             <div class="row">
-              <div class="col-6">
+              <div class="col-md-6">
                 <p class="fs-5" style="padding-left:10px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, non optio. Aut a dolorem nisi vel
                     eos
                     magni assumenda quisquam laboriosam ut quas quibusdam sequi debitis optio quidem beatae incidunt, quis
@@ -115,7 +112,7 @@
                     Impedit mollitia porro laudantium cum a. Iste minima, minus velit tempore doloremque dicta sit ad?
                     </p>
               </div>
-              <div class="col-6">
+              <div class="d-none d-md-block col-6">
                 <img src="static/peoples_working.jpg" alt="" style= "height:360px">
               </div>
             </div>
@@ -132,9 +129,7 @@
 
          </div>
 
-         <div class="btn-cu">
-               <button type="button">Contact Us</button>
-         </div>
+         {% include  'footer.html'%}
 
     </div>
 </body>
